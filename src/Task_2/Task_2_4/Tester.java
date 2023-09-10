@@ -3,7 +3,7 @@ package Task_2.Task_2_4;
 import java.util.Scanner;
 
 public class Tester {
-    boolean working = true;
+
     public static void main(String [] args){
         boolean working = true;
         Scanner scanner = new Scanner(System.in);
@@ -12,10 +12,11 @@ public class Tester {
 
         while(working){
             System.out.println(
-                            "\n1) Добавить компьютер"+
-                            "\n2) Удалить компьютер"+
-                            "\n3) Поиск компьютера"+
-                            "\n4) Выход");
+                    """
+                    1) Добавить компьютер
+                    2) Удалить компьютер
+                    3) Поиск компьютера
+                    4) Выход""");
             int action = scanner.nextInt();
             if (action == 1)
                 shop.addComputer(scanner2.nextLine());
