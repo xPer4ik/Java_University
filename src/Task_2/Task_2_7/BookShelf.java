@@ -1,10 +1,9 @@
 package Task_2.Task_2_7;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 public class BookShelf {
-    private ArrayList<Book>books = new ArrayList<>();
+    private final ArrayList<Book> books = new ArrayList<>();
     private int numberOfBooks = 0;
 
 
