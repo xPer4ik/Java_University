@@ -17,5 +17,12 @@ public class BookTest {
         System.out.println(books.getBook(1).toString());
         System.out.println(books.theNewest().toString());
         System.out.println(books.theOldest().toString());
+        System.out.println("---------");
+        System.out.println(books.getBook(0).toString());
+        System.out.println(books.getBook(1).toString());
+        books.sortInOrder();
+        System.out.println(books.getBook(0).toString());
+        System.out.println(books.getBook(1).toString());
+
     }
 }
