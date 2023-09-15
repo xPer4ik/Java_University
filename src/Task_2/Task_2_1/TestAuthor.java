@@ -2,7 +2,7 @@ package Task_2.Task_2_1;
 import java.util.Scanner;
 
 public class TestAuthor {
-    public static void main(String[] args){
+    public static void main(String[] args){ // тестирования методов класса Author
         Author first_author = new Author("Valera", "valera@gmail.com", 'm');
         System.out.println("Имя:" + first_author.getName());
         System.out.println("Почта:" + first_author.getEmail());

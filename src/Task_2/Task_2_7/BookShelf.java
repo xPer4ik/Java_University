@@ -10,15 +10,15 @@ public class BookShelf {
     public BookShelf(){
 
     }
-    public void addBook(String author, String name, int dateOfCreation){
+    public void addBook(String author, String name, int dateOfCreation){ // добавить книгу в книжную полку
         Book book = new Book(author,name,dateOfCreation);
         this.books.add(book);
         numberOfBooks++;
     }
     public Book getBook(int number){
         return books.get(number);
-    }
-    public Book theOldest(){
+    } // "взять" книгу
+    public Book theOldest(){ // вывести книгу с самым старым
         Book theOldest = books.get(0);
         for(Book book:books){
             if(theOldest.getDateOfCreation() > book.getDateOfCreation()){
@@ -28,7 +28,7 @@ public class BookShelf {
         }
         return theOldest;
     }
-    public Book theNewest() {
+    public Book theNewest() { // вывести книгу с самым новым изданием
         Book theNewest = books.get(0);
         for (Book book : books) {
             if (theNewest.getDateOfCreation() < book.getDateOfCreation()) {
@@ -37,7 +37,7 @@ public class BookShelf {
         }
         return theNewest;
     }
-    public void sortInOrder(){
+    public void sortInOrder(){ // отсортировать книги по изданию в порядке возрастания
         for(int i = 0; i <this.numberOfBooks;i++){
             for(int j = i+1;j < this.numberOfBooks;j++){
                 if(this.books.get(j).getDateOfCreation() < this.books.get(i).getDateOfCreation()){

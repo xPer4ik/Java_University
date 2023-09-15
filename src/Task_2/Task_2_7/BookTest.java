@@ -2,7 +2,7 @@ package Task_2.Task_2_7;
 
 public class BookTest {
 
-    public static void main(String [] args){
+    public static void main(String [] args){ // тестирование работы книги
         BookShelf books = new BookShelf();
         books.addBook("Bob Green", "Algorithm", 2011);
         books.addBook("Tommy", "Phones", 1991);

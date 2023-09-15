@@ -1,7 +1,7 @@
 package Task_2.Task_2_2;
 
 public class TestBall {
-    public static void main(String[] args){
+    public static void main(String[] args){ // тестирование работы методов класса Ball
         Ball ball1 = new Ball(1.0,4.0);
         Ball ball2 = new Ball();
         System.out.println("x:" + ball1.getX());

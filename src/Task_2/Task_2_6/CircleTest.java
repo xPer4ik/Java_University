@@ -2,7 +2,7 @@ package Task_2.Task_2_6;
 
 
 public class CircleTest {
-    public static void main(String [] args){
+    public static void main(String [] args){ // демонстрация работы методов класса Circle
         Circle c1 = new Circle(3,1,3);
         Circle c2 = new Circle(4.2,43.2,55);
         System.out.println("Circle1: x:" +c1.getX() + " y:" + c1.getY() + " r:" +c1.getR());

@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class ReverseArray {
 
-    public static void reversing(ArrayList<String>list){
+    public static void reversing(ArrayList<String>list){ // метод меняет элементы списка в обратном порядке
         String w;
             int listSize = list.size();
             for(int i=0; i < listSize/2;i++){
@@ -15,17 +15,17 @@ public class ReverseArray {
             }
 
     }
-    public static void main(String [] args){
+    public static void main(String [] args){  // основания функция
         ArrayList<String>list = new ArrayList<>();
         System.out.println("Введите количество чисел:");
         Scanner scanner = new Scanner(System.in);
         Scanner scanner2 = new Scanner(System.in);
         int count = scanner.nextInt();
-        for(int i = 0; i < count; i++){
+        for(int i = 0; i < count; i++){ // добавление элементов  массов
             list.add(scanner2.nextLine());
         }
-        reversing(list);
-        System.out.println(list);
+        reversing(list); // вызов метода
+        System.out.println(list); // вывод массива
 
 
 

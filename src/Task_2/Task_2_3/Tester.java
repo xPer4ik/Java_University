@@ -6,7 +6,7 @@ public class Tester {
     public Circle [] circles = new Circle[10];
     public int count_of_circles = 0;
 
-    public Tester new_circle(Tester t)
+    public Tester new_circle(Tester t) // создание класса который работает с классами Circle и Point
     {
         Scanner scanner = new Scanner(System.in);;
         System.out.println("Введите радиус:");
@@ -19,12 +19,12 @@ public class Tester {
 
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) { // Создание кругов
         Tester t = new Tester();
         t = t.new_circle(t);
         t = t.new_circle(t);
 
-        for(int i=0;i<t.count_of_circles;i++){
+        for(int i=0;i<t.count_of_circles;i++){ // вывод кругов с их информацией
             System.out.println("\n");
             System.out.println(t.circles[i].toString());
         }

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class DogKennel {
     private final ArrayList<Dog>dogs = new ArrayList<>();
 
-    public static void main(String[] args){
+    public static void main(String[] args){ // тестирование работы класса собака
         DogKennel kennel = new DogKennel();
         Dog Bob = new Dog("Bob",5);
         Dog Misha = new Dog("Misha",8);
@@ -17,7 +17,7 @@ public class DogKennel {
         Misha.setNickname("Vova");
         kennel.dogs.add(Misha);
 
-        for(Dog dog:kennel.dogs){
+        for(Dog dog:kennel.dogs){ // вывод всех собак и информации о них
             System.out.println(dog.toString());
         }
     }
