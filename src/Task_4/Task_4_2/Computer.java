@@ -29,7 +29,7 @@ public class Computer {
         return proseccor;
     }
     public String toString(){
-        return "Computer: " + brand + "\n    " + "processor: " + proseccor + "\n    " + "memory: " + memory + "\n    " + "processor: " + proseccor;
+        return "Computer: " + brand + "\n    " + "processor: " + proseccor.toString() + "\n    " + "memory: " + memory + "\n    " + "processor: " + proseccor;
     }
 }
 
