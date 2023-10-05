@@ -4,32 +4,25 @@ public class Computer {
     private final Brand brand;
     private final Memory memory;
     private final Monitor monitor;
-    private final Proseccor proseccor;
+    private final Processor processor;
 
-    public Computer(Brand brand,Memory memory,Monitor monitor,Proseccor proseccor){
+    public Computer(Brand brand, Memory memory, Monitor monitor, Processor processor){
         this.brand = brand;
         this.memory = memory;
         this.monitor = monitor;
-        this.proseccor = proseccor;
+        this.processor = processor;
     }
 
-    public Brand getBrand() {
-        return brand;
-    }
-
-    public Memory getMemory() {
-        return memory;
-    }
-
-    public Monitor getMonitor() {
-        return monitor;
-    }
-
-    public Proseccor getProseccor() {
-        return proseccor;
-    }
     public String toString(){
-        return "Computer: " + brand + "\n    " + "processor: " + proseccor.toString() + "\n    " + "memory: " + memory + "\n    " + "processor: " + proseccor;
+        return "Computer: " + this.brand + "\n    " + this.memory + "\n    " + this.monitor + "\n    " + this.processor;
+    }
+
+
+    public static void main(String [] args){
+        Computer hpPro = new Computer(Brand.hp, new Memory("1024Gb"), new Monitor("FullHd"),new Processor("i5-13400F"));
+        Computer asus1020 = new Computer(Brand.asus, new Memory("512Gb"), new Monitor("2K"),new Processor("Razen7"));
+        System.out.println(hpPro);
+        System.out.println(asus1020);
     }
 }
 

@@ -1,9 +1,9 @@
 package Task_4.Task_4_2;
 
-public class Proseccor {
+public class Processor {
     private final String model;
 
-    Proseccor(String model){
+    Processor(String model){
         this.model = model;
     }
     @Override
