@@ -22,11 +22,15 @@ public class Years{
             this.temp = temp;
         }
 
+        public int getTemp() {
+            return temp;
+        }
+
         public void setTemp(int tempp){
             this.temp = tempp;
         }
         public String getDescription() {
-            return "Холодное время года}";
+            return "Холодное время года";
         }
 
 
@@ -52,9 +56,14 @@ public class Years{
 
     public static void main(String [] args){
         Year favorite = Year.Autumn;
+        Year favorite2 = Year.Summer;
         System.out.println("Мое любимое время года: " + favorite);
         System.out.println("Средняя температура: " + favorite.temp);
         favoriteYear(favorite);
+        System.out.println(favorite2.getDescription());
+        for(Year x:Year.values()){
+            System.out.println(x + " " +x.getDescription() +" Средняя температура: "+  x.getTemp());
+        }
     }
 }
 
