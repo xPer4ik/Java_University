@@ -34,7 +34,7 @@ public class MovableCircle implements Movable {
 
 
     public static void main(String[] args) {
-        MovableCircle circle1 = new MovableCircle(100,100,5,5,10);
+        Movable circle1 = new MovableCircle(100,100,5,5,10);
         System.out.println(circle1);
         circle1.moveDown();
         circle1.moveUp();
@@ -42,5 +42,6 @@ public class MovableCircle implements Movable {
         circle1.moveLeft();
         circle1.moveRight();
         System.out.println(circle1);
+
     }
 }
