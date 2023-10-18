@@ -14,7 +14,7 @@ public class Score extends JFrame {
 
     public Score() {
         setTitle("Футбольный матч: Милан vs Мадрид");
-        setSize(300, 200);
+        setSize(5000, 200);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new GridLayout(4, 1));
 
