@@ -29,6 +29,6 @@ public class Image {
         } catch (IOException e) {
             System.err.println("Ошибка при загрузке изображения: " + e.getMessage());
         }
-
+        // нужно указать путь к картинке в командную строку "src\Task_12\Task_12_2\bell.png"
     }
 }
