@@ -20,7 +20,7 @@ public class StartFinishData {
         ReceivedDate = dateFormat.parse(assignmentReceivedDateTime);
 
 
-        System.out.println("Фамилия разработчика: " + developerName);
+        System.out.println("Фамилия и имя разработчика: " + developerName);
         System.out.println("Дата и время получения задания: " + dateFormat.format(ReceivedDate));
         System.out.println("Текущая дата и время: " + dateFormat.format(currentDate));
     }

@@ -1,6 +1,8 @@
 package Task_13.Task_13_5;
 
 
+import java.util.Scanner;
+
 public class PhoneNumberConverter {
     public static String formatPhoneNumber(String input) {
         // Удаляем все символы, кроме цифр
@@ -31,26 +33,34 @@ public class PhoneNumberConverter {
     }
 
     public static void main(String[] args) {
-        System.out.println("Было:");
+        System.out.println("Введите номер:");
         String phoneNumber1 = "+79175655655";
         String phoneNumber2 = "+104289652211";
         String phoneNumber3 = "89175655655";
         String phoneNumber4 = "+71113334445555";
+        Scanner scanner = new Scanner(System.in);
+        String phoneNumber5 = scanner.nextLine();
 
+        System.out.println("Было:");
         System.out.println(phoneNumber1);
         System.out.println(phoneNumber2);
         System.out.println(phoneNumber3);
         System.out.println(phoneNumber4);
+        System.out.println(phoneNumber5);
 
 
         String formatted1 = formatPhoneNumber(phoneNumber1);
         String formatted2 = formatPhoneNumber(phoneNumber2);
         String formatted3 = formatPhoneNumber(phoneNumber3);
         String formatted4 = formatPhoneNumber(phoneNumber4);
+        String formatted5 = formatPhoneNumber(phoneNumber5);
+
         System.out.println("Стало:");
         System.out.println(formatted1);
         System.out.println(formatted2);
         System.out.println(formatted3);
         System.out.println(formatted4);
+        System.out.println(formatted5);
+
     }
 }

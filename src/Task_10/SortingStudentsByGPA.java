@@ -79,7 +79,7 @@ public class SortingStudentsByGPA {
         ArrayList<Student> studentsList = new ArrayList<>();
         studentsList.add(new Student("John", "Doe", "Computer Science", 2, "CS101", 3.8));
         studentsList.add(new Student("Alice", "Smith", "Mathematics", 3, "Math202", 3.7));
-        studentsList.add(new Student("Bob", "Johnson", "Physics", 1, "Phys101", 4.0));
+        studentsList.add(new Student("ABoba", "Johnson", "Physics", 1, "Phys101", 4.0));
 
         sorter.setArray(studentsList);
 
