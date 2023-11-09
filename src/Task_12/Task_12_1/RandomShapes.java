@@ -6,7 +6,7 @@ import java.util.Random;
 public class RandomShapes extends JPanel {
     private static final int WINDOW_WIDTH = 800;
     private static final int WINDOW_HEIGHT = 600;
-    private static final int NUM_SHAPES = 20;
+    private static final int NUM_SHAPES = 2000;
 
     private final Shape[] shapes;
 
