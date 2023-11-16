@@ -3,8 +3,9 @@ package Task_15.Task_15_4;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
+
 class Calculator extends JFrame {
-    JTextArea jta1 = new JTextArea(1,20);
+    JTextArea jta1 = new JTextArea(1, 20);
     JButton button1 = new JButton("7");
     JButton button2 = new JButton("8");
     JButton button3 = new JButton("9");
@@ -21,7 +22,11 @@ class Calculator extends JFrame {
     JButton button14 = new JButton(".");
     JButton button15 = new JButton("=");
     JButton button16 = new JButton("+");
-    //начало конструктора класса LabExample
+
+    double lastNumber = 0;
+    double res = 0;
+    String lastOperator = "";
+
     Calculator() {
         super("Example");
         setLayout(new FlowLayout());
@@ -43,25 +48,25 @@ class Calculator extends JFrame {
         add(button14);
         add(button15);
         add(button16);
-        JButton[] numberButtons = { button1, button2, button3, button4, button5, button6, button7, button8, button9, button10, button11, button12, button13, button14, button16 };
+
+        JButton[] numberButtons = {button1, button2, button3, button4, button5, button6, button7, button8, button9, button10, button11, button12, button13, button14, button16};
 
         for (JButton button : numberButtons) {
             button.addActionListener(e -> jta1.append(button.getText()));
         }
 
-    // Отдельная обработка button16, так как у него специальный комментарий
-        button16.addActionListener(e -> jta1.append(button16.getText()));
         button15.addActionListener(new ActionListener() {
-            // op =
             public void actionPerformed(ActionEvent e) {
                 String str = jta1.getText();
                 System.out.println(str);
+
                 String operand1 = "";
                 String operand2 = "";
                 String operation = "";
                 double x1 = 0;
                 double x2 = 0;
                 String operations = "/*+-";
+
                 for (int i = 0; i < str.length() - 1; i++) {
                     String a = str.substring(i, i + 1);
                     if ((operations.indexOf(a) != -1) && (a != "-" && i != 0)) {
@@ -71,41 +76,51 @@ class Calculator extends JFrame {
                         break;
                     }
                 }
-                jta1.setText("");
-                try {
-                    x1 = Double.parseDouble(operand1);
-                    x2 = Double.parseDouble(operand2);
-                    switch (operation) {
-                        case "/":
-                            jta1.setText( String.valueOf(x1 / x2));
-                            break;
-                        case "+":
-                            jta1.setText( String.valueOf(x1 + x2));
-                            break;
-                        case "*":
-                            jta1.setText( String.valueOf(x1 * x2));
-                            break;
-                        case "-":
-                            jta1.setText( String.valueOf(x1 - x2));
-                            break;
-                        default:
-                            JOptionPane.showMessageDialog( null, "Error","alert" , JOptionPane.ERROR_MESSAGE);
-                            break;
+
+                if (operand2.isEmpty()) {
+                    operand1 = str;
+                    operand2 = lastNumber + "";
+                    operation = lastOperator;
+                }
+
+                if (!operand1.isEmpty() && !operand2.isEmpty() && !operation.isEmpty()) {
+                    try {
+                        x1 = Double.parseDouble(operand1);
+                        x2 = Double.parseDouble(operand2);
+                        lastNumber = x2;
+
+                        switch (operation) {
+                            case "/":
+                                res = x1 / x2;
+                                break;
+                            case "+":
+                                res = x1 + x2;
+                                break;
+                            case "*":
+                                res = x1 * x2;
+                                break;
+                            case "-":
+                                res = x1 - x2;
+                                break;
+                            default:
+                                JOptionPane.showMessageDialog(null, "Error", "alert", JOptionPane.ERROR_MESSAGE);
+                                break;
+                        }
+                        jta1.setText(String.valueOf(res));
+                        lastOperator = operation;
+                    } catch (Exception exception) {
+                        JOptionPane.showMessageDialog(null, "Error", "alert", JOptionPane.ERROR_MESSAGE);
                     }
                 }
-                catch (Exception exception) {
-                    JOptionPane.showMessageDialog( null, "Error","alert" , JOptionPane.ERROR_MESSAGE);
-                }
-                System.out.println(operand1);
-                System.out.println(operation);
-                System.out.println(operand2);
             }
         });
     }
+
     {
         setVisible(true);
     }
-    public static void main(String[]args) {
+
+    public static void main(String[] args) {
         new Calculator();
     }
-} // конец main()
+}
